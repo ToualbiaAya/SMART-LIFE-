@@ -1452,7 +1452,7 @@ function updateGauge(pct, levelText) {
   const endDeg = startDeg + pct * totalDeg;
   const p = arcPath(cx, cy, r, startDeg, endDeg);
   document.getElementById('g-fill').setAttribute('d', p);
-  const needleDeg = startDeg + pct * totalDeg - 90;
+  const needleDeg = startDeg + pct * totalDeg;
   document.getElementById('g-needle').style.transform = `rotate(${needleDeg}deg)`;
   document.getElementById('g-pct').textContent = Math.round(pct*100) + '%';
   document.getElementById('g-level').textContent = levelText || '--';
